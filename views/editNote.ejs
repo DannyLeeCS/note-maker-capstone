@@ -1,0 +1,29 @@
+<!-- Include header ejs to this page -->
+<%- include("partials/header.ejs") %>
+
+<!-- Container containing a form to update the post -->
+<div class="container d-flex justify-content-between align-items-center">
+  <div class="form-container">
+    <h1>Edit Your Note</h1>
+    <form action="/update/<%= index %>" method="post">
+      <textarea name="updatedNote" rows="10" cols="50"><%= note %></textarea>
+      <br><br>
+      <!-- Button to update the post -->
+      <button type="submit" class="btn btn-primary border-0" style="background-color:#347928">Post Edited Note</button>
+      <!-- Button for getting back to all posts if users do not wish to save edited version -->
+      
+      <a href="/post">
+        <button type="button" class="btn btn-primary border-0" style="background-color:#7de36b; color: black">Back to all notes</button>
+      </a>
+    </form>
+  </div>
+
+  <!-- Inclue a decorative image for the not editing page -->
+  <div class="image-container">
+    <base href="/">
+    <img src="assets/image2.png" alt="Creative Image" class="img-fluid" style="max-width: 100%; height: auto;">
+  </div>
+</div>
+
+<!-- Include the footer section to this page -->
+<%- include("partials/footer.ejs") %>

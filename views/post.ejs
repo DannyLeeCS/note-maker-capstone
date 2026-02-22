@@ -1,0 +1,42 @@
+<!-- The page's header -->
+<%- include("partials/header.ejs") %>
+
+<h1> Your notes </h1>
+
+<!-- Container containing all posts -->
+<div class="post-container">
+  <!-- Logic to display all the notes -->
+  <% if(postedNote.length >= 1){ %>         <!-- display all notes in case there is at least one note -->
+    <!-- Iterates through the array of notes -->
+    <% for(i=0; i< postedNote.length; i++){ %>
+            <!-- Display the notes -->
+            <% var numberedPost = "Post number " + (i+1) + ": " + postedNote[i] %>
+            <p><%= numberedPost %> </p>
+            <!-- For each note, shows an edit and delete post button -->
+            <div>
+              <!-- The edit Button -->
+              <form action="/edit/<%= i %>" method="post" style="display:inline-block;">
+                <button type="submit" class="btn btn-warning">Edit</button>
+              </form>
+
+              <!-- The delete Button -->
+              <form action="/delete/<%= i %>" method="post" style="display:inline-block;">
+                <button type="submit" class="btn btn-danger">Delete</button>
+              </form>
+            </div>
+    <!-- If there is no note, display a message -->          
+    <% } %>
+  <% } else { %>
+    <p> You don't have any note yet </p>
+  <% } %>
+</div>
+
+<!-- Button for creating a new post, this button takes user back to the home page to post new notes -->
+<div class="new-post-button d-flex justify-content-center my-3">
+  <a href="/">
+    <button class="btn btn-primary border-0" style="background-color:#347928">New post</button>
+  </a>
+</div>
+
+<!-- The page's footer -->
+<%- include("partials/footer.ejs") %>

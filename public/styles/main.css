@@ -1,0 +1,94 @@
+h1{
+    color:#A0937D !important;
+}
+
+body{
+    background-image: linear-gradient(to right, #F6E6CB,#B6C7AA);
+}
+
+footer{
+    color: #A0937D;
+}
+
+.label{
+    color: brown;
+    font-size: 20px;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+footer {
+    text-align: center;     /* Center the footer text */
+    padding: 10px;          /* Add space above and below the footer text */
+    margin-top: 10px;       /* Create some space between form and footer */
+}
+
+.container {
+    padding: 10px;          /* Add padding for space around the form */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.form-container {
+    flex: 1;
+    max-width: 55%;         /* Adjust the width as needed */
+    margin-top: 50px;
+}
+
+.image-container {
+    flex: 1;
+    max-width: 45%;         /* Adjust width for the image */
+    text-align: left;       /* Align image to the right */
+}
+
+/* Styles for the post-container */
+.post-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;                   /* Light background color */
+    border-radius: 10px;                           /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);    /* Subtle shadow */
+    padding: 20px;                                 /* Padding around the content */
+    margin: 20px auto;                              /* Center the container with some margin */
+    max-width: 80%;                                 /* Adjust the width of the container */
+    border: 1px solid #ddd;                       /* Border around the container */
+  }
+  
+  .post-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);          /* 4 equal-width columns */
+    gap: 20px;                                      /* Space between boxes */
+  }
+  
+  .post-container p {
+    font-size: 1em;                                 /* Make the text a larger */
+    color: #333;                                  /* Darker text color for better readability */
+    padding: 10px;
+    border: 1px solid #ccc;                       /* Border of each box */
+    border-radius: 5px;                             /* Rounded corners */
+    background-color: #f9f9f9;                    /* Light background color */
+    text-align: center;                             /* Center text inside the box */
+  }
+
+/* Media query for smaller screens (less than 768px) */
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .form-container {
+      width: 40%;
+      text-align: center;
+    }
+  
+    .image-container {
+      width: 80%;                                   /* Adjust image width for smaller screens */
+      margin: 0 auto;                               /* Center the image inside */
+    }
+    textarea {
+        width: 100%;                                /* Ensure textarea is responsive */
+        max-width: 100%;
+    }
+  }
