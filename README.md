@@ -4,6 +4,11 @@ Note Maker is a simple note-taking web application built with Node.js, Express, 
 
 Notes are stored in memory using a JavaScript array, so all data will be cleared when the server restarts.
 
+## Screenshots
+<img width="1896" height="861" alt="image" src="https://github.com/user-attachments/assets/71db34e0-62ec-4e72-a682-8d0db054978b" />
+<img width="1915" height="607" alt="image" src="https://github.com/user-attachments/assets/ad795293-86aa-41ce-a2a5-b9dffc0a41cd" />
+<img width="1914" height="813" alt="image" src="https://github.com/user-attachments/assets/7a413d61-a7d0-409d-bebc-2f96f830963f" />
+
 ## Features
 
 - Create a new note  
